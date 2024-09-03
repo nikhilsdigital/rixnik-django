@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),  # Ensure `views.home` points to the correct view
     path('store/', include('store.urls')),  # Include `store` app's URLs
+    path('cart/', include('carts.url')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
